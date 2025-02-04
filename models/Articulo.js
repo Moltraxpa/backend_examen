@@ -1,23 +1,23 @@
 import { articulos } from "../datos/articulos.js";
-let compras = [];
+let articulosDevolver = articulos;
 
 export class Articulo {
   static getAll() {
-    return articulos;
+    return articulosDevolver;
   }
 
   static getOneBiID(id) {
-    return articulos.find(articulo => articulo.id == id);
+    return articulosDevolver.find(articulo => articulo.id == id);
   }
 
-  static create(compra) {
-    const nuevaCompra = {
-      cliente: compra.cliente,
-      articulos: compra.articulos,
-      total: compra.total
+  static create(articulo) {
+    const nuevoArticulo = {
+      id: articulo.id,
+      nombre: articulo.nombre,
+      precio: articulo.precio
     };
 
-    compras = [...compras, nuevaCompra];
-    return nuevaCompra;
+    articulosDevolver = [...articulosDevolver, nuevoArticulo];
+    return nuevoArticulo;
   }
 }

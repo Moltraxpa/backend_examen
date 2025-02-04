@@ -8,7 +8,7 @@ const PORT = 3030;
 app.use(
   cors({
       origin: 
-    //   "http://localhost:5173",
+       //"http://localhost:5173",
      "https://examen-frontend-puce.vercel.app",
 
   })
@@ -16,8 +16,8 @@ app.use(
 
 app.use('/api/articulos', articuloRouter);
 
-// app.listen(PORT, () => {
-//   console.log("Servidor a la espera en el puerto " + PORT);
-// }); 
+app.listen(PORT, () => {
+  console.log("Servidor a la espera en el puerto " + PORT);
+}); 
 
 export default app;
