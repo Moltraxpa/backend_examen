@@ -9,7 +9,7 @@ app.use(
   cors({
       origin: 
     //   "http://localhost:5173",
-     "examen-frontend-puce.vercel.app",
+     "https://examen-frontend-puce.vercel.app/",
 
   })
 );
